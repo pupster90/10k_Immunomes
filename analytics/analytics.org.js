@@ -1,3 +1,4 @@
+
 // Initial Tracking Code
 (function(i,s,o,g,r,a,m){
   i['GoogleAnalyticsObject']=r;
@@ -18,69 +19,31 @@ ga('create', 'UA-105335783-2', 'auto');
 ga('send', 'pageview');
 
 
-// Idea 2
+$(document).ready(function() {
+    
+    // Tracking Button Categories
+    $('#transcriptomicsBtn').on('click', function() {
+        ga('send', 'event', 'geneBtn', 'geneBtn');
+    });
+    $('#proteomicsBtn').on('click', function() {
+        ga('send', 'event', 'rnaBtn', 'rnaBtn');
+    });
+    $('#immunoassaysBtn').on('click', function() {
+        ga('send', 'event', 'cytometryBtn', 'cytometryBtn');
+    });
+    $('#labBtn').on('click', function() {
+        ga('send', 'event', 'labBtn', 'labBtn');
+    });
 
-// Tracking Downloads
-$('#downloadPlot').on('click', function() {
-    ga('send', 'event', 'downloadPlot', 'downloadPlot');
-});
-$('#downloadPlotData').on('click', function() {
-    ga('send', 'event', 'downloadPlotData', 'downloadPlotData');
-});
-$('#downloadZip').on('click', function() {
-    ga('send', 'event', 'downloadZip', 'downloadZip');
-});
+    // Tracking Downloads
+    $('#downloadPlot').on('click', function() {
+        ga('send', 'event', 'downloadPlot', 'downloadPlot');
+    });
+    $('#downloadPlotData').on('click', function() {
+        ga('send', 'event', 'downloadPlotData', 'downloadPlotData');
+    });
+    $('#downloadAllData').on('click', function() {
+        ga('send', 'event', 'downloadAll', 'downloadAll');
+    });
 
-// Tracking Action Buttons
-$('#homeBtn').on('click', function() {
-    ga('send', 'event', 'homeBtn', 'homeBtn');
 });
-$('#geneBtn').on('click', function() {
-    ga('send', 'event', 'geneBtn', 'geneBtn');
-});
-$('#rnaBtn').on('click', function() {
-    ga('send', 'event', 'rnaBtn', 'rnaBtn');
-});
-$('#cytometryBtn').on('click', function() {
-    ga('send', 'event', 'cytometryBtn', 'cytometryBtn');
-});
-$('#labBtn').on('click', function() {
-    ga('send', 'event', 'labBtn', 'labBtn');
-});
-$('#antibodyBtn').on('click', function() {
-    ga('send', 'event', 'antibodyBtn', 'antibodyBtn');
-});
-
-// Idea 1
-/*
-// Tracking Downloads
-$(document).on('click', 'button', function() {
-    ga('send', 'event', 'button','downloadPlot');
-});
-$(document).on('click', 'button', function() {
-    ga('send', 'event', 'button','downloadPlotData');
-});
-$(document).on('click', 'button', function() {
-    ga('send', 'event', 'button','downloadZip');
-});
-
-// Tracking Action Buttons
-$(document).on('click', 'button', function() {
-    ga('send', 'event', 'button','homeBtn');
-});
-$(document).on('click', 'button', function() {
-    ga('send', 'event', 'button','geneBtn');
-});
-$(document).on('click', 'button', function() {
-    ga('send', 'event', 'button','rnaBtn');
-});
-$(document).on('click', 'button', function() {
-    ga('send', 'event', 'button','cytometryBtn');
-});
-$(document).on('click', 'button', function() {
-    ga('send', 'event', 'button','labBtn');
-});
-$(document).on('click', 'button', function() {
-    ga('send', 'event', 'button','antibodyBtn');
-});
-*/
